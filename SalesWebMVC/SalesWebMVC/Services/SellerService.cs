@@ -1,4 +1,5 @@
-﻿using SalesWebMVC.Data;
+﻿
+using SalesWebMVC.Data;
 using SalesWebMVC.Models;
 using System;
 using System.Collections.Generic;
@@ -23,7 +24,6 @@ namespace SalesWebMVC.Services
 
         public void Insert(Seller obj)
         {
-            obj.Department = _context.Department.First();
             _context.Add(obj);
             _context.SaveChanges();
         }
